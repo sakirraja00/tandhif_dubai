@@ -7,8 +7,16 @@ import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 
 const Footer: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   const { t } = useLanguage();
 
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);``
+  };
   return (
     <footer className="bg-gray-900 dark:bg-black text-white transition-colors duration-300">
       <div className="container mx-auto px-4 py-16">
@@ -58,10 +66,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">{t('features')}</a></li>
+              <li><a href="#home"   onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-white transition-colors">{t('features')}</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">{t('pricing')}</a></li>
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">{t('blog')}</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">{t('contact')}</a></li>
+              <li><a  href="#contact" className="text-gray-400 hover:text-white transition-colors">{t('contact')}</a></li>
             </ul>
           </div>
 

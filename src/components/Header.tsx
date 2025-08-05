@@ -24,7 +24,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm transition-colors duration-300">
+    <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm shadow-sm transition-colors duration-300">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -34,18 +34,18 @@ const Header: React.FC = () => {
           >
             <div className="relative">
             <img
-  src={icon}
-  alt="App Icon"
-  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
-/>
+               src={icon}
+               alt="App Icon"
+               className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
+              />
 
             </div>
            <div className="flex items-center">
            <img
-  src={logo}
-  alt="Tandhif Logo"
-  className="h-4 object-contain "
-/>
+              src={logo}
+              alt="Tandhif Logo"
+              className="h-4 object-contain "
+            />
            </div>  
           </div>
 

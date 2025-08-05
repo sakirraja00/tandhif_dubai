@@ -31,7 +31,7 @@ const DerniersArticles: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 w-full">
+    <section className="py-20 bg-white dark:bg-gray-950 transition-colors duration-300 w-full">
          <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-10 text-black dark:text-white">
         {t('latestArticles')}

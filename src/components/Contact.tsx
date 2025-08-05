@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-200  dark:bg-gray-900 p-8 rounded-xl text-white transition-colors">
+          <div className="bg-gray-200  dark:bg-gray-950 p-8 rounded-xl text-white transition-colors">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>

@@ -2,6 +2,9 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logo from '../images/logo.png';
+import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -12,12 +15,26 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">T</span>
-              </div>
-              <span className="text-xl font-bold">Tandhif Dubai</span>
+          <div 
+            className="flex items-center cursor-pointer group" 
+          
+          >
+            <div className="relative">
+            <img
+               src={icon}
+               alt="App Icon"
+               className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
+              />
+
             </div>
+           <div className="flex items-center">
+           <img
+              src={logo}
+              alt="Tandhif Logo"
+              className="h-4 object-contain "
+            />
+           </div>  
+          </div>
             <p className="text-gray-400 leading-relaxed">
               {t('footerCompanyDesc')}
             </p>

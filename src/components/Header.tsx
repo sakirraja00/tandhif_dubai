@@ -2,6 +2,8 @@ import React from 'react';
 import { Menu, X, Sun, Moon, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
+import logo from '../images/logo.png';
+import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -12,7 +14,7 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
+    setIsMenuOpen(false);``
   };
 
   const languages = [
@@ -26,13 +28,25 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">T</span>
+          <div 
+            className="flex items-center cursor-pointer group" 
+            onClick={() => scrollToSection('hero')}
+          >
+            <div className="relative">
+            <img
+  src={icon}
+  alt="App Icon"
+  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
+/>
+
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white">
-              Tandhif Dubai
-            </span>
+           <div className="flex items-center">
+           <img
+  src={logo}
+  alt="Tandhif Logo"
+  className="h-4 object-contain "
+/>
+           </div>  
           </div>
 
           {/* Desktop Navigation */}

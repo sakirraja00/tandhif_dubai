@@ -1,3 +1,4 @@
+// Updated Footer.tsx
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -18,8 +19,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">Tandhif Dubai</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Votre partenaire de confiance pour des services de nettoyage professionnels à Dubai. 
-              Excellence, fiabilité et satisfaction garantie.
+              {t('footerCompanyDesc')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -39,31 +39,27 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Liens Rapides</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">À Propos</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">{t('features')}</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">{t('pricing')}</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">{t('blog')}</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">{t('contact')}</a></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Legal Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Nos Services</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('legalInfo')}</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Nettoyage Résidentiel</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Nettoyage Commercial</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Nettoyage en Profondeur</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Nettoyage de Tapis</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Nettoyage de Vitres</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('legalNotice')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">{t('termsOfUse')}</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('contact')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={16} className="text-blue-400" />
@@ -75,7 +71,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={16} className="text-blue-400 mt-1" />
-                <span className="text-gray-400">Business Bay, Dubai<br />Émirats Arabes Unis</span>
+                <span className="text-gray-400">{t('address')}</span>
               </div>
             </div>
           </div>

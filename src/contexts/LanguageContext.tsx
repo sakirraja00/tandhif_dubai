@@ -14,10 +14,23 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   fr: {
+
+// footer//
+footerCompanyDesc: 'Solution complète pour la gestion de vos activités de nettoyage professionnel.',
+quickLinks: 'Liens rapides',
+features: 'Fonctionnalités',
+pricing: 'Tarifs',
+blog: 'Blog',
+legalInfo: 'Informations légales',
+legalNotice: 'Mentions légales',
+termsOfUse: 'CGU',
+address: 'Business Bay, Dubai\nÉmirats Arabes Unis',
+
+
     // Navigation
-    home: 'Accueil',
-    services: 'Services',
-    about: 'À Propos',
+    home: 'Fonctionnalités',
+    services: 'Tarifs',
+    about: 'Blog',
     contact: 'Contact',
     
     // Hero Section
@@ -63,7 +76,7 @@ const translations = {
     enterprise: 'Entreprise',
     
     // Testimonials
-    testimonialsTitle: 'Ce Que Disent Nos Clients',
+    testimonialsTitle: 'Ce que nos clients disent',
     
     // WhatsApp
     whatsappText: 'Chattez avec nous',
@@ -77,11 +90,27 @@ article3Title: 'Guide ultime : Réussir dans le secteur du ménage à domicile e
 article3Desc: 'Découvrez les stratégies essentielles pour créer et développer une entreprise de ménage à domicile prospère. Guide pratique pour les entrepreneurs du secteur.'
 
   },
+
+
+
   en: {
+
+
+    // footer//
+    footerCompanyDesc: 'Complete solution to manage your professional cleaning business.',
+quickLinks: 'Quick Links',
+features: 'Features',
+pricing: 'Pricing',
+blog: 'Blog',
+legalInfo: 'Legal Information',
+legalNotice: 'Legal Notice',
+termsOfUse: 'Terms of Use',
+address: 'Business Bay, Dubai\nUnited Arab Emirates',
+
     // Navigation
-    home: 'Home',
-    services: 'Services',
-    about: 'About',
+    home: 'Features',
+    services: 'Pricing',
+    about: 'Blog',
     contact: 'Contact',
     
     // Hero Section
@@ -139,13 +168,27 @@ article2Desc: 'In-depth analysis of technological innovations and new practices 
 article3Title: 'Ultimate Guide: Succeeding in the Home Cleaning Sector in 2024',
 article3Desc: 'Discover essential strategies to create and grow a successful home cleaning business. A practical guide for sector entrepreneurs.'
 
+
+
   },
   ar: {
+
+    // footer//
+    footerCompanyDesc: 'حل متكامل لإدارة أنشطة التنظيف الاحترافية الخاصة بك.',
+quickLinks: 'روابط سريعة',
+features: 'الميزات',
+pricing: 'الأسعار',
+blog: 'مدونة',
+legalInfo: 'معلومات قانونية',
+legalNotice: 'الإشعارات القانونية',
+termsOfUse: 'شروط الاستخدام',
+address: 'الخليج التجاري، دبي\nالإمارات العربية المتحدة',
+
     // Navigation
-    home: 'الرئيسية',
-    services: 'الخدمات',
-    about: 'من نحن',
-    contact: 'اتصل بنا',
+    home: 'الميزات',
+    services: 'الأسعار',
+    about: 'المدونة',
+    contact: 'اتصال',
     
     // Hero Section
     heroTitleKleanitStyle: 'بسّط إدارة أعمال التنظيف الخاصة بك',

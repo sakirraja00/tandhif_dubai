@@ -85,10 +85,14 @@ const Header: React.FC = () => {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
-                <Globe size={18} />
-                <span className="text-sm">
+                {/* <Globe size={18} /> */}
+                <span style={{ fontSize: '30px', lineHeight: '20px' }}>
                   {languages.find(lang => lang.code === language)?.flag}
                 </span>
+                <span className="text-sm font-semibold">
+    {language.toUpperCase()}
+  </span>
+
               </button>
               
               {isLangOpen && (
@@ -114,11 +118,12 @@ const Header: React.FC = () => {
 
             {/* Theme Toggle */}
             <button
-              onClick={toggleTheme}
-              className="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
+  onClick={toggleTheme}
+  className="p-2 border border-gray-400 dark:border-gray-600 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+>
+  {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+</button>
+
 
             {/* Mobile Menu Button */}
             <button
